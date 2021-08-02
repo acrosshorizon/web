@@ -1,0 +1,21 @@
+import java.util.Scanner;
+import java.io.*;
+
+
+public class source {
+    public static void main(String[] args) throws IOException{
+        File infile = new File("data.txt");
+        Scanner input = new Scanner(infile);
+        String ANSI_GREEN = "\u001B[31m";
+        String ANSI_RESET = "\u001B[0m";
+        String text = "you ok...:)";
+        while(input.hasNext()){
+            System.out.println(ANSI_GREEN + input.nextLine() + ANSI_RESET);
+            try {
+                Thread.sleep(100);
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+        }
+    }
+}
